@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "/projects/Projects/ai-phishing-defense/venv/bin/python",
+  "python.analysis.extraPaths": [
+    "/projects/Projects/ai-phishing-defense/venv/lib/python3.13/site-packages"
+  ]
+}

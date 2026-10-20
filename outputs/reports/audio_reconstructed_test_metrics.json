@@ -1,0 +1,100 @@
+{
+  "created_at_utc": "2026-10-18T17:11:33.471228+00:00",
+  "evaluation": "reconstructed sample-level 500-row audio holdout from supplied Colab split recipe",
+  "qualification": "The split is random and sample-level. Feature batches contain no speaker/session/source IDs, so this is not source-disjoint evidence. Local checkpoint hash was not supplied by Colab and exact checkpoint identity is unverified. The supplied Colab excerpt computes test_idx but never creates a test loader or reports test metrics; these are a new local re-score of the reconstructed holdout.",
+  "feature_files": [
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_1.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_10.pkl",
+      "sample_count": 1566
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_2.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_3.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_4.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_5.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_6.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_7.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_8.pkl",
+      "sample_count": 20000
+    },
+    {
+      "path": "/projects/Projects/ai-phishing-defense/data/audio_features_part_9.pkl",
+      "sample_count": 20000
+    }
+  ],
+  "feature_rows": 181566,
+  "feature_order": "lexicographic sorted(audio_features_part_*.pkl), matching the supplied Colab code",
+  "split": {
+    "method": "sklearn train_test_split over row indices, stratified by label",
+    "random_state": 42,
+    "test_size": 500,
+    "test_label_counts": {
+      "genuine": 51,
+      "spoof": 449
+    },
+    "source_group_ids_available": false
+  },
+  "checkpoint_path": "/projects/Projects/ai-phishing-defense/models/final/audio_detector/audio_cnn_model.pth",
+  "checkpoint_sha256": "92712fa7a438f87c064f069808c4564183ffbe5eb559442ca0c0b5eafd5dd247",
+  "device": "cpu",
+  "metrics_threshold_0_50": {
+    "threshold": 0.5,
+    "n": 500,
+    "confusion_matrix": {
+      "tp": 448,
+      "tn": 46,
+      "fp": 5,
+      "fn": 1
+    },
+    "accuracy": 0.988,
+    "precision": 0.9889624724061811,
+    "recall": 0.9977728285077951,
+    "f1": 0.9933481152993349,
+    "false_positive_rate": 0.09803921568627451,
+    "false_negative_rate": 0.0022271714922048997,
+    "roc_auc": 0.9975108083322416,
+    "test_eer_estimate": 0.022053364775754404
+  },
+  "metrics_threshold_0_45_backend": {
+    "threshold": 0.45,
+    "n": 500,
+    "confusion_matrix": {
+      "tp": 448,
+      "tn": 46,
+      "fp": 5,
+      "fn": 1
+    },
+    "accuracy": 0.988,
+    "precision": 0.9889624724061811,
+    "recall": 0.9977728285077951,
+    "f1": 0.9933481152993349,
+    "false_positive_rate": 0.09803921568627451,
+    "false_negative_rate": 0.0022271714922048997,
+    "roc_auc": 0.9975108083322416,
+    "test_eer_estimate": 0.022053364775754404
+  },
+  "threshold_note": "0.50 matches the supplied Colab validation metric decision rule; 0.45 is the deployed backend audio threshold. Neither threshold was selected using this test holdout.",
+  "predictions_file": "/projects/Projects/ai-phishing-defense/outputs/reports/audio_reconstructed_test_predictions.csv"
+}

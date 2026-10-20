@@ -1,0 +1,8 @@
+Configuration,Accuracy,Precision,Recall,F1-Score
+1. Email Only,0.99,0.9851,0.995,0.99
+2. Audio Only,0.975,0.9524,1.0,0.9756
+3. Video Only (Calibrated),0.665,0.6122,0.9,0.7287
+4. Email + Audio,0.9925,0.99,0.995,0.9925
+5. Email + Video,0.99,0.9851,0.995,0.99
+6. Audio + Video,0.9775,0.9569,1.0,0.978
+7. Full Fusion,0.99,0.9851,0.995,0.99

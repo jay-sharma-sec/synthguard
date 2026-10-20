@@ -1,0 +1,28 @@
+# Secrets and per-machine configuration
+.env
+.env.*
+!.env.example
+
+# Python environments and generated files
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Frontend dependencies and build output
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/.vite/
+
+# Large generated training artifacts and local datasets
+data/
+colab_export/
+
+# Logs and local archives
+logs/
+SynthGuard_Project_Package.zip
+
+# Stale/backup model artifacts; retain only the checkpoint loaded by the current backend
+models/final/video_detector/model.safetensors
+models/final/video_detector/*.bak

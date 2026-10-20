@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">SynthGuard startup splash screen</title><desc id="desc">A dark, restrained cyber-security splash screen with the SynthGuard S-shield, subtle cyan rings, and an initialization label.</desc>
+  <defs>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="matrix(0 650 -900 0 960 445)" gradientUnits="userSpaceOnUse"><stop stop-color="#103D60" stop-opacity=".75"/><stop offset=".48" stop-color="#0B1626" stop-opacity=".4"/><stop offset="1" stop-color="#050A12" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shield" x1="850" y1="260" x2="1070" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#E8F0FC"/><stop offset=".27" stop-color="#39E8FF"/><stop offset=".68" stop-color="#168DFF"/><stop offset="1" stop-color="#2456D8"/></linearGradient>
+    <linearGradient id="smark" x1="886" y1="324" x2="1028" y2="515" gradientUnits="userSpaceOnUse"><stop stop-color="#F3FBFF"/><stop offset=".42" stop-color="#39E8FF"/><stop offset="1" stop-color="#5488FF"/></linearGradient>
+    <linearGradient id="progress" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#39E8FF"/><stop offset="1" stop-color="#5488FF"/></linearGradient>
+    <filter id="glow" x="690" y="130" width="540" height="600" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="28"/></filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0H0V72" stroke="#2A7897" stroke-opacity=".13" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#050A12"/><rect width="1920" height="1080" fill="url(#ambient)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+  <g opacity=".22" stroke="#168DFF"><path d="M0 780H1920M0 840H1920M0 900H1920"/><path d="M320 0V1080M600 0V1080M1320 0V1080M1600 0V1080"/></g>
+  <g opacity=".55" stroke="#168DFF"><circle cx="960" cy="414" r="252" stroke-dasharray="2 12"/><circle cx="960" cy="414" r="298" stroke-opacity=".45"/><circle cx="960" cy="414" r="345" stroke-opacity=".18"/></g>
+  <g filter="url(#glow)" opacity=".7"><path d="M960 210 1084 258v96c0 84-49 144-124 195-75-51-124-111-124-195v-96l124-48Z" fill="#00BFFF"/></g>
+  <g transform="translate(800 190)">
+    <path d="M160 12 284 60v96c0 84-49 144-124 195-75-51-124-111-124-195V60L160 12Z" fill="#081726" stroke="url(#shield)" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M160 34 262 73v82c0 68-38 117-102 162-64-45-102-94-102-162V73l102-39Z" stroke="#39E8FF" stroke-opacity=".28" stroke-width="2"/>
+    <path d="M214 92h-78c-28 0-45 15-45 37 0 17 11 29 36 39l66 27c27 11 42 27 42 51 0 36-29 59-72 59h-73" stroke="url(#smark)" stroke-width="25" stroke-linecap="square" stroke-linejoin="round"/>
+    <path d="M110 94h105M106 287h61" stroke="#E8F0FC" stroke-opacity=".8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M160 12v35" stroke="#E8F0FC" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="960" y="672" font-size="82" font-weight="720" letter-spacing="-2.5" fill="#E8F0FC">Synth<tspan fill="#39E8FF">Guard</tspan></text>
+    <text x="960" y="724" font-size="20" font-weight="550" letter-spacing="8" fill="#8492A9">THREAT INTELLIGENCE</text>
+    <path d="M900 758h120" stroke="#39E8FF" stroke-width="3" stroke-linecap="round"/>
+    <rect x="760" y="842" width="400" height="5" rx="2.5" fill="#17283A"/>
+    <rect x="760" y="842" width="154" height="5" rx="2.5" fill="url(#progress)"/>
+    <text x="960" y="884" font-size="14" letter-spacing="4.5" fill="#8492A9">INITIALISING INTERFACE</text>
+  </g>
+  <g fill="#39E8FF"><circle cx="960" cy="92" r="3"/><circle cx="520" cy="414" r="2" opacity=".65"/><circle cx="1400" cy="414" r="2" opacity=".65"/><circle cx="720" cy="670" r="2" opacity=".5"/><circle cx="1200" cy="670" r="2" opacity=".5"/></g>
+  <path d="M0 1010H1920" stroke="#1C3D54" stroke-opacity=".5"/><text x="64" y="1045" font-family="Inter, sans-serif" font-size="12" letter-spacing="3" fill="#536A80">SYNTHGUARD / SECURE ANALYSIS ENVIRONMENT</text><text x="1856" y="1045" text-anchor="end" font-family="Inter, sans-serif" font-size="12" letter-spacing="3" fill="#536A80">INITIALISING</text>
+</svg>

@@ -1,0 +1,38 @@
+services:
+  synthguard-backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      PYTHONUNBUFFERED: "1"
+      SYNTHGUARD_MODEL_DIR: /app/models
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+    volumes:
+      - ./models:/app/models:ro
+    expose:
+      - "8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 180s
+    restart: unless-stopped
+    init: true
+
+  synthguard-frontend:
+    build:
+      context: .
+      dockerfile: frontend-react/Dockerfile
+    depends_on:
+      synthguard-backend:
+        condition: service_healthy
+    ports:
+      - "${SYNTHGUARD_BIND:-127.0.0.1}:${SYNTHGUARD_PORT:-8080}:80"
+    restart: unless-stopped
+    init: true

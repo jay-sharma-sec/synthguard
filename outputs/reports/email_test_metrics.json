@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-18T16:32:28.352123+00:00",
+  "evaluation": "current-checkpoint re-score of the saved email test split",
+  "qualification": "Checkpoint training provenance is unverified; do not present these as held-out performance until training and model-selection records establish that this split was not used.",
+  "api_base": "http://127.0.0.1:8080/api",
+  "model_name": "distilbert-base-uncased-finetuned",
+  "threshold": 0.5,
+  "api_input_limit_characters": 100000,
+  "input_clipping_count": 1,
+  "sample_count": 3508,
+  "test_split_path": "/projects/Projects/ai-phishing-defense/data/test_dataset.pkl",
+  "test_split_sha256": "9f8c3d7445223d7113f9164896f2607f0bc803dec233c139024987325c99b558",
+  "checkpoint_path": "/projects/Projects/ai-phishing-defense/models/final/phishing_email/model.safetensors",
+  "checkpoint_sha256": "c1f4ae43e094a5aeeb7e91c3401b087b177b64e224f630bd70da6e2e62a11c01",
+  "elapsed_seconds": 475.792,
+  "confusion_matrix": {
+    "tp": 1308,
+    "tn": 2023,
+    "fp": 173,
+    "fn": 4
+  },
+  "metrics": {
+    "accuracy": 0.9495438996579247,
+    "precision": 0.8831870357866306,
+    "recall": 0.9969512195121951,
+    "f1": 0.9366272824919442,
+    "false_positive_rate": 0.07877959927140255,
+    "false_negative_rate": 0.003048780487804878
+  },
+  "predictions_file": "/projects/Projects/ai-phishing-defense/outputs/reports/email_test_predictions.csv",
+  "unclipped_sample_count": 3507,
+  "unclipped_confusion_matrix": {
+    "tp": 1308,
+    "tn": 2023,
+    "fp": 172,
+    "fn": 4
+  },
+  "unclipped_metrics": {
+    "accuracy": 0.9498146564014828,
+    "precision": 0.8837837837837837,
+    "recall": 0.9969512195121951,
+    "f1": 0.9369627507163324,
+    "false_positive_rate": 0.07835990888382688,
+    "false_negative_rate": 0.003048780487804878
+  },
+  "api_score_precision_decimal_places": 4
+}

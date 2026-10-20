@@ -1,0 +1,161 @@
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e8f0fc;
+  background: #070a10;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #070a10;
+  --bg-soft: #0a0f18;
+  --panel: #0c121d;
+  --panel-raised: #101927;
+  --panel-hover: #131e2e;
+  --border: rgba(146, 174, 211, 0.12);
+  --border-strong: rgba(146, 174, 211, 0.2);
+  --text: #e8f0fc;
+  --muted: #8492a9;
+  --muted-2: #56657c;
+  --cyan: #39e8ff;
+  --blue: #5488ff;
+  --green: #4ce7ad;
+  --purple: #bd8bff;
+  --red: #ff6689;
+  --amber: #ffc875;
+  --sidebar-width: 258px;
+  --topbar-height: 72px;
+  --radius: 15px;
+  --radius-sm: 10px;
+  --font-mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--bg);
+  scrollbar-color: #26374c #080c13;
+  scrollbar-width: thin;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 70% -15%, rgba(34, 91, 145, 0.12), transparent 42%),
+    var(--bg);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #061016;
+  background: var(--cyan);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080c13;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #080c13;
+  border-radius: 10px;
+  background: #29374a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--bg);
+  scrollbar-color: #26374c #080c13;
+  scrollbar-width: thin;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 70% -15%, rgba(34, 91, 145, 0.12), transparent 42%),
+    var(--bg);
+}
+
+}
+
+/* Accessible baseline for the SynthGuard interface */
+html { font-size: 16px; }
+body { font-size: 15px; line-height: 1.55; }
